@@ -40,3 +40,5 @@ I coded the 85% of the codebase by myself, Claude Code in plan mode help me to c
 ### TODO
 
 - Make a search bar to facilitate the search of a Patient
+- Add Docker
+- Connect to datadog to retrieve analitycs about cards usage
