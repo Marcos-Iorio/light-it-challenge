@@ -16,10 +16,11 @@ This repo contains the solution to the challenge of Light-It
 - Zustand(for managing global states)
 - Eslint(for code linting)
 - Vitest, React Testing library(to test components, stores, schemas)
+- Claude Code
 
 ## Codebase
 
-The entry point is the `page.tsx` a SSR component that fetches all the data and hydrate the `PatientStore` with the data to be available in the whole app.
+The entry point is the `page.tsx`, a SSR component that fetches all the data from the API and hydrate the `PatientStore` with the data to be available in the whole app.
 I put the reusable componentes in unique files and all the related Patient components below a **Patient** folder
 The mayority of the types are under `types.ts`.
 /utils have useful and reusable utilitarie functions
@@ -31,11 +32,19 @@ I used Zustand to manage stores of Patient, Toaster and Modal to enable globally
 
 Zod + React Hook Form help to create a nice form validation and managing all the data and sumbmitting function.
 
-Toaster, Button and Modal meant to be reusable, fully typed components
+Toaster, Button and Modal meant to be reusable, fully typed components.
 
-All the styles of the app where made by me without any UI libraries.
+All the styles of the app were made by me without any UI libraries.
 
 I coded the 85% of the codebase by myself, Claude Code in plan mode help me to choose technical decisions and made the test for all the code. All the test passed succesfully.
+
+## Structure
+
+This app is pretty basic so no deep arquitechture is needed, so I go with a main page to display de patients and all the components both UI and page-related are under /components.
+Mi favorite folder structure for a nextjs app, is create a separate folder for each page `/app/about-us/page.tsx` and inside this page make the unique componets `/about-us/components/**`
+Then add the test inside each component file, this make easier to read and change tests.
+
+Then a general component under /app refering to reusable components or UI components like modal, buttons with their test.
 
 ### TODO
 
