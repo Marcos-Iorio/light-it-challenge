@@ -4,7 +4,9 @@ This repo contains the solution to the challenge of Light-It
 
 1- Clone the repo with `git clone https://github.com/Marcos-Iorio/light-it-challenge.git`
 2- Run `pnpm install` to install all the packages required
-3- Go to localhost:3000 in your browser to see the app working
+3- Run `pnpm dev` to run the local app
+4- Go to localhost:3000 in your browser to see the app working
+5- Run `pnpm test` to run all the test
 
 ## Tech stack
 
